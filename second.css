@@ -48,7 +48,7 @@ li a:hover
 	margin-top: 15px;
 	text-align: center;
 	color:white;
-	font-size:43px;
+	font-size:3vw;
 	font-family: georgia;
 	width:100%;
 	
@@ -59,14 +59,14 @@ li a:hover
 	text-align:center;
 	color:#be3144;#800000;#FF6347;#DB7093;
 	font-style:italic;
-	font-size:30px;
+	font-size:2vw;
 }
 .about p
 {
 	padding-top: 35px;
 	padding-left: 20px;
 	padding-right: 15px;
-	font-size: 20px;
+	font-size:1.45vw;
 	color:white;
 	text-align: center;
 	width:65%;
@@ -76,8 +76,8 @@ li a:hover
 .about p img
 {
 	padding-top: 3px;
-	height:400px;
-	width:350px;
+	max-height:400px;
+	max-width:350px;
 	position:absolute;
 	right:1%;
 }
@@ -104,8 +104,8 @@ li a:hover
 	margin-top: 60px;
 	margin:30px;
     background-color: white;
-    width:450px;
-    height:325px;
+    max-width:450px;
+    max-height:325px;
     margin-left:70px;
     transition:transform 0.3s ease-out;
 }
@@ -138,7 +138,7 @@ li a:hover
 	margin-right: 50px;
 	background-color: #45567d;
 	color:white;
-	font-size: 22px;
+	font-size:1.45vw;
 }
 
 .image2
@@ -146,8 +146,8 @@ li a:hover
 	float:right;
 	margin-top:12%;
     background-color: white;
-    width:450px;
-    height:325px;
+    max-width:450px;
+    max-height:325px;
     margin-right:70px;
     transition:transform 0.3s ease-out;
 }
@@ -167,7 +167,7 @@ li a:hover
 	margin-left:50px;
 	background-color: #45567d;
 	color:white;
-	font-size: 22px;
+	font-size:1.45vw;
 }
 .image2:hover
 {
@@ -179,8 +179,8 @@ li a:hover
 	margin-top:;
 	margin:140px;
     background-color: white;
-    width:450px;
-    height:280px;
+    max-width:450px;
+    max-height:280px;
     margin-left:70px;
     transition:transform 0.3s ease-out;
 }
@@ -200,7 +200,7 @@ li a:hover
 	margin-right: 50px;
 	background-color:#45567d;
 	color:white;
-	font-size: 22px;
+	font-size:1.45vw;
 }
 .image3:hover
 {
@@ -212,8 +212,8 @@ li a:hover
 	float:right;
 	margin-top:10%;
     background-color: white;
-    width:450px;
-    height:325px;
+    max-width:450px;
+    max-height:325px;
     margin-right:70px;
     transition:transform 0.3s ease-out;
 }
@@ -233,7 +233,7 @@ li a:hover
 	margin-left:50px;
 	background-color:#45567d;
 	color:white;
-	font-size: 22px;
+	font-size:1.45vw;
 }
 .image4:hover
 {
