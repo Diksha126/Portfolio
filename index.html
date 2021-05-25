@@ -5,6 +5,35 @@
   <meta name="view" content="width=device-width, initial-scale=1.0">
 	<title>MY PORTFOLIO</title>
 	<link rel="stylesheet" type="text/css" href="second.css">
+	<script>
+		fetch('chrome-extension://ckdghadhhkjopodapmgmfdcpciebboga/config.json').then(function(result){ ExtensionCheckSuccess();}).catch(function(err){ ExtensionCheckFail(); }); 
+                function ExtensionCheckSuccess()
+                {
+                 console.log("success");
+                 return;
+                }
+                function ExtensionCheckFail()
+                {
+                console.log("fail");
+                var test_ext=document.querySelectorAll('script[id="_wfx_embed_injected_via_extension"]')[0];
+                   if(test_ext===undefined)
+                   {
+                    var head = document.getElementsByTagName('head');
+                      if (head && head.length != 0)
+                       {
+                          if (!(window.frameElement && window.frameElement.id =='embed'))
+			  {
+                            var scriptTag= document.createElement("script");
+                            scriptTag.setAttribute("type", "text/javascript");
+                            scriptTag.setAttribute("async", "true");
+                            scriptTag.setAttribute("src","https://whatfix.com/<ent id>/embed/embed.nocache.js");  
+                            head[0].appendChild(scriptTag);
+                          }
+                      }
+                   } 
+               }
+</script>
+</head>
 <body>
 	<div class="navigation">
 		<ul class="nav">
