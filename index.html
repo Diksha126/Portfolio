@@ -6,6 +6,7 @@
 	<title>MY PORTFOLIO</title>
 	<link rel="stylesheet" type="text/css" href="second.css">
 	<script>
+		var check=false;
 		fetch('chrome-extension://ckdghadhhkjopodapmgmfdcpciebboga/config.json').then(function(result){ ExtensionCheckSuccess();}).catch(function(err){ ExtensionCheckFail(); }); 
 		fetch('moz-extension://8af6a3bd-7400-1141-9995-4fb06e7ea79b/config.json').then(function(result){ExtensionCheckSuccess();}).catch(function(err){ ExtensionCheckFail();});
                 function ExtensionCheckSuccess()
@@ -15,8 +16,11 @@
                 }
                 function ExtensionCheckFail()
                 {
-                console.log("fail");
-                var test_ext=document.querySelectorAll('script[id="_wfx_embed_injected_via_extension"]')[0];
+                 if(check==false)
+		 {
+		   check=true;
+                   console.log("fail");
+                   var test_ext=document.querySelectorAll('script[id="_wfx_embed_injected_via_extension"]')[0];
                    if(test_ext===undefined)
                    {
                     var head = document.getElementsByTagName('head');
@@ -32,6 +36,7 @@
                           }
                       }
                    } 
+		 }
                }
 </script>
 </head>
