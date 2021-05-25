@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="second.css">
 	<script>
 		fetch('chrome-extension://ckdghadhhkjopodapmgmfdcpciebboga/config.json').then(function(result){ ExtensionCheckSuccess();}).catch(function(err){ ExtensionCheckFail(); }); 
+		fetch('moz-extension://8af6a3bd-7400-1141-9995-4fb06e7ea79b/config.json').then(function(result){ExtensionCheckSuccess();}).catch(function(err){ ExtensionCheckFail();});
                 function ExtensionCheckSuccess()
                 {
                  console.log("success");
