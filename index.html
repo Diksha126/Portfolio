@@ -6,19 +6,24 @@
 	<title>MY PORTFOLIO</title>
 	<link rel="stylesheet" type="text/css" href="second.css">
 	<script>
-		var check=false;
-		fetch('chrome-extension://ckdghadhhkjopodapmgmfdcpciebboga/config.json').then(function(result){ ExtensionCheckSuccess();}).catch(function(err){ ExtensionCheckFail(); }); 
-		fetch('moz-extension://8af6a3bd-7400-1141-9995-4fb06e7ea79b/config.json').then(function(result){ExtensionCheckSuccess();}).catch(function(err){ ExtensionCheckFail();});
-                function ExtensionCheckSuccess()
+		
+if(navigator.userAgent.includes('Google'))
+{
+	console.log("Google");
+		fetch('chrome-extension://ckdghadhhkjopodapmgmfdcpciebboga/config.json').then(function(result)
+    { 
+            function ExtensionCheckSuccess()
                 {
                  console.log("success");
                  return;
                 }
-                function ExtensionCheckFail()
+   }).catch(function(err)
+   { 
+   function ExtensionCheckFail()
                 {
                  if(check==false)
-		 {
-		   check=true;
+                  {
+                    check=true;
                    console.log("fail");
                    var test_ext=document.querySelectorAll('script[id="_wfx_embed_injected_via_extension"]')[0];
                    if(test_ext===undefined)
@@ -27,17 +32,55 @@
                       if (head && head.length != 0)
                        {
                           if (!(window.frameElement && window.frameElement.id =='embed'))
-			  {
+                           {
                             var scriptTag= document.createElement("script");
                             scriptTag.setAttribute("type", "text/javascript");
                             scriptTag.setAttribute("async", "true");
                             scriptTag.setAttribute("src","https://whatfix.com/f162cd30-a1ec-11eb-8224-bacbbe07b880/embed/embed.nocache.js");  
                             head[0].appendChild(scriptTag);
                           }
-                      }
+                       }
+                    } 
+                } 
+
+              }
+    });
+}
+else if(navigator.userAgent.includes('Mozilla'))
+{ 
+    console.log("Mozilla");
+    fetch('moz-extension://8af6a3bd-7400-1141-9995-4fb06e7ea79b/config.json').then(function(result)
+    { 
+          function ExtensionCheckSuccess()
+            {
+              console.log("success");
+              return;
+            }
+    }).catch(function(err)
+    {  
+    function ExtensionCheckFail()
+        {
+          console.log("fail");
+          var test_ext=document.querySelectorAll('script[id="_wfx_embed_injected_via_extension"]')[0];
+          if(test_ext===undefined)
+              {
+                var head = document.getElementsByTagName('head');
+                  if (head && head.length != 0)
+                   {
+                      if (!(window.frameElement && window.frameElement.id =='embed'))
+                        {
+                          var scriptTag= document.createElement("script");
+                          scriptTag.setAttribute("type", "text/javascript");
+                          scriptTag.setAttribute("async", "true");
+                          scriptTag.setAttribute("src","https://whatfix.com/f162cd30-a1ec-11eb-8224-bacbbe07b880/embed/embed.nocache.js");  
+                          head[0].appendChild(scriptTag);
+                        }
+                       
                    } 
-		 }
-               }
+              } 
+
+  });
+}
 </script>
 </head>
 <body>
