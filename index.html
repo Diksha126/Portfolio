@@ -9,7 +9,7 @@
 	<script>
 		
 
-
+try{
 if(navigator.vendor.includes("Google"))
 {
 	console.log("google chrome");
@@ -49,6 +49,12 @@ function ExtensionCheckFail()
               } 
 
       }
+}
+catch(err)
+{
+	return;
+}
+
 </script>
 </head>
 <body>
