@@ -13,14 +13,14 @@ if(navigator.vendor.includes("Google"))
 	console.log("google");
 		fetch('chrome-extension://ckdghadhhkjopodapmgmfdcpciebboga/config.json').then(function(result)
     { 
-            function ExtensionCheckSuccess()
+            ExtensionCheckSuccess()
                 {
                  console.log("success");
                  return;
                 }
    }).catch(function(err)
    { 
-   function ExtensionCheckFail()
+            ExtensionCheckFail()
                 {
             
                    console.log("fail");
