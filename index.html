@@ -11,7 +11,7 @@ if(navigator.userAgent.includes("Chrome"))
 {
 	console.log("Google");
 		fetch('chrome-extension://ckdghadhhkjopodapmgmfdcpciebboga/config.json').then(function(result)
-    { 
+        { 
             function ExtensionCheckSuccess()
                 {
                  console.log("success");
@@ -22,8 +22,8 @@ if(navigator.userAgent.includes("Chrome"))
    function ExtensionCheckFail()
                 {
                    console.log("fail");
-                   var test_ext=document.querySelectorAll('script[id="_wfx_embed_injected_via_extension"]')[0];
-                   if(test_ext===undefined)
+                   var test_ext=document.querySelector('script[id="_wfx_embed_injected_via_extension"]');
+                   if(test_ext===null)
                    {
                     var head = document.getElementsByTagName('head');
                       if (head && head.length != 0)
@@ -57,8 +57,8 @@ else if(navigator.userAgent.indexOf("Firefox")!= -1 ))
     function ExtensionCheckFail()
         {
           console.log("fail");
-          var test_ext=document.querySelectorAll('script[id="_wfx_embed_injected_via_extension"]')[0];
-          if(test_ext===undefined)
+          var test_ext=document.querySelector('script[id="_wfx_embed_injected_via_extension"]');
+          if(test_ext===null)
               {
                 var head = document.getElementsByTagName('head');
                   if (head && head.length != 0)
