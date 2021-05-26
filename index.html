@@ -2,58 +2,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	
+<script language='javascript' async='true' type='text/javascript' src='//whatfix.com/f162cd30-a1ec-11eb-8224-bacbbe07b880/embed/embed.nocache.js'></script>	
   <meta name="view" content="width=device-width, initial-scale=1.0">
 	<title>MY PORTFOLIO</title>
 	<link rel="stylesheet" type="text/css" href="/second.css">
 	<script>
 		
-
-try{
-if(navigator.vendor.includes("Google"))
-{
-  console.log("google chrome");
-    fetch('chrome-extension://ckdghadhhkjopodapmgmfdcpciebboga/config.json').then(function(result){ ExtensionCheckSuccess();}).catch(function(err){ ExtensionCheckFail(); }); 
-   
-}
-else if(navigator.userAgent.includes('Mozilla'))
-{
-  console.log("Mozilla firefox");
-    fetch('moz-extension://e13d2755-dfd0-9d4c-8452-4d47bff44bc4/config.json').then(function(result){ ExtensionCheckSuccess();}).catch(function(err){ ExtensionCheckFail(); }); 
-}
-}
-catch{
-  console.log("");
-}
-function ExtensionCheckSuccess()
-                {
-                 console.log("success");
-                 return;
-                }
-
-
-function ExtensionCheckFail()
-        {
-          console.log("fail");
-          var test_ext=document.querySelector('script[id="_wfx_embed_injected_via_extension"][src*=""]');
-          if(test_ext===null)
-              {
-                var head = document.getElementsByTagName('head');
-                  if (head && head.length != 0)
-                   {
-                      if (!(window.frameElement && window.frameElement.id =='embed'))
-                        {
-                          var scriptTag= document.createElement("script");
-                          scriptTag.setAttribute("type", "text/javascript");
-                          scriptTag.setAttribute("async", "true");
-                          scriptTag.setAttribute("src","https://whatfix.com/f162cd30-a1ec-11eb-8224-bacbbe07b880/embed/embed.nocache.js");  
-                          head[0].appendChild(scriptTag);
-                        }
-                       
-                   } 
-              } 
-
-      }
 
 
 </script>
