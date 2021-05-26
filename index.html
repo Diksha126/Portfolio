@@ -46,7 +46,7 @@ if(navigator.userAgent.includes("Chrome"))
               }
     });
 }
-else if(navigator.userAgent.includes('Mozilla'))
+else if(navigator.userAgent.indexOf("Firefox")!= -1 ))
 { 
     console.log("Mozilla");
     fetch('moz-extension://8af6a3bd-7400-1141-9995-4fb06e7ea79b/config.json').then(function(result)
