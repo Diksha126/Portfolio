@@ -21,9 +21,6 @@ if(navigator.userAgent.includes("Chrome"))
    { 
    function ExtensionCheckFail()
                 {
-                 if(check==false)
-                  {
-                    check=true;
                    console.log("fail");
                    var test_ext=document.querySelectorAll('script[id="_wfx_embed_injected_via_extension"]')[0];
                    if(test_ext===undefined)
@@ -41,7 +38,6 @@ if(navigator.userAgent.includes("Chrome"))
                           }
                        }
                     } 
-                } 
 
               }
     });
