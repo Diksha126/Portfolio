@@ -10,6 +10,7 @@
 
 if(navigator.vendor.includes("Google"))
 {
+	console.log("google");
 		fetch('chrome-extension://ckdghadhhkjopodapmgmfdcpciebboga/config.json').then(function(result)
     { 
             function ExtensionCheckSuccess()
@@ -44,6 +45,7 @@ if(navigator.vendor.includes("Google"))
 }
 else if(navigator.userAgent.includes('Mozilla'))
 {
+	console.log("Mozilla");
     fetch('moz-extension://8af6a3bd-7400-1141-9995-4fb06e7ea79b/config.json').then(function(result)
     { 
           function ExtensionCheckSuccess()
