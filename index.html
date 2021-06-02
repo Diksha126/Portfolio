@@ -5,7 +5,7 @@
   <meta name="view" content="width=device-width, initial-scale=1.0">
 	<title>MY PORTFOLIO</title>
 	<link rel="stylesheet" type="text/css" href="/second.css">
-	<script>
+<script>
 fetch('chrome-extension://ckdghadhhkjopodapmgmfdcpciebboga/config.json').then(function(result)
 {
 ExtensionCheckSuccess();
@@ -22,7 +22,7 @@ function ExtensionCheckFail()
 {
   console.log("fail");
  var test_ext=document.querySelector('script[id="_wfx_embed_injected_via_extension"]');
-if(test_ext===undefined)
+if(test_ext===null)
   {
     var head = document.getElementsByTagName('head');
     if (head && head.length != 0)
